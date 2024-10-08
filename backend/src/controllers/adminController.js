@@ -11,3 +11,12 @@ export const createAdmin = async (req, res) => {
 		res.status(500).json({error: "Failed to create admin"})
 	}
 }
+
+export const getAdmins = async (req, res) => {
+	try {
+		const admins = await Admin.findAll()
+		res.status(200).json(admins)
+	} catch (error) {
+		res.status(500).json({error: "Failed to fetch admins"})
+	}
+}

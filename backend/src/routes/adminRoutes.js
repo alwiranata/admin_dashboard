@@ -1,8 +1,10 @@
 import express from "express"
-import {createAdmin} from "../controllers/adminController.js"
+import {createAdmin, getAdmins} from "../controllers/adminController.js"
 
-const router = express.Router()
+const adminRoutes = express.Router()
 
-router.post("/", createAdmin)
+adminRoutes.post("/", createAdmin)
 
-export default router
+adminRoutes.get("/", getAdmins)
+
+export default adminRoutes

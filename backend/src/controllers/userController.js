@@ -18,9 +18,9 @@ export const createUser = async (req, res) => {
 		})
 
 		await History.create({
-			action: "User created",
+			action: "User Created",
 			user_id: newUser.id_user,
-			admin_id: req.adminId, 
+			admin_id: req.adminId,
 			createdAt: new Date(),
 		})
 
@@ -57,7 +57,7 @@ export const updateUser = async (req, res) => {
 		await History.create({
 			admin_id: req.adminId,
 			user_id: user.id_user,
-			action: "update",
+			action: "User Update",
 		})
 		res.json({message: "User updated successfully", data: user})
 	} catch (error) {

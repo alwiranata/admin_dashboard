@@ -1,4 +1,4 @@
-import DashboardLayoutBasic from "./pages/DashboardLayoutBasic"
+import DashboardLayoutBasic from "./layouts/DashboardLayoutBasic"
 const App = () => {
 	return (
 		<div>
